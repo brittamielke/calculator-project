@@ -45,6 +45,7 @@ public class CalculatorController {
 		mv.addObject("secondNum", secondNumber);
 		mv.addObject("operator", operator);
 		mv.addObject("result", result);
+		mv.addObject("resultList", calc.getResultList());
 		return mv;
 
 	}

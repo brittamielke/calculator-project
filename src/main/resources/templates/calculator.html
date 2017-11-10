@@ -20,8 +20,17 @@
 		<Button>Calculate It!</Button>
 	<br>
 	<br>
-	<p>{{ firstNum }} {{ operator }} {{ secondNum }} = {{ result }}</p>
 	</form>
-
+	<p>{{ firstNum }} {{ operator }} {{ secondNum }} = {{ result }}</p>
+	<p>The number of values in history is: {{ resultList.size }}</p>
+<table>
+	<tbody>
+		{{#resultList}}
+		<tr>
+			<td>{{ . }}</td>
+		</tr>
+		{{/resultList}}
+	</tbody>
+</table>
 </body>
 </html>
