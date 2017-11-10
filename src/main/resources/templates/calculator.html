@@ -5,7 +5,8 @@
 <title>Calculator</title>
 </head>
 <body>
-	<H2>Welcome to the Calcluator Page</H2>
+	<h2>Bienvenue sur la page du claculateur</h2>
+	<h4>(Welcome to the Calcluator Page)</h4>
 	<form action="/" method="post">
 		Enter a math equation:<br>
 		<input type="number" name="firstNumber" required>
@@ -21,8 +22,10 @@
 	<br>
 	<br>
 	</form>
-	<p>{{ firstNum }} {{ operator }} {{ secondNum }} = {{ result }}</p>
-	<p>The number of values in history is: {{ resultList.size }}</p>
+	{{#firstNum}}
+		<p>{{ firstNum }} {{ operator }} {{ secondNum }} = {{ result }}</p>
+	{{/firstNum}}
+	
 <table>
 	<tbody>
 		{{#resultList}}
