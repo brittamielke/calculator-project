@@ -16,6 +16,7 @@ public class CalculatorController {
 		calc = new Calculator();
 	}
 
+	
 	@RequestMapping("/")
 	public ModelAndView showApp(Double firstNumber, Double secondNumber, String operator) {
 		
