@@ -11,19 +11,19 @@ public class Calculator {
 		return result;
 	}
 	public double subtract(String firstNumber, String secondNumber) {
-		double result = Double.parseDouble(firstNumber) + Double.parseDouble(secondNumber);
+		double result = Double.parseDouble(firstNumber) - Double.parseDouble(secondNumber);
 		return result;
 	}
 	public double multiply(String firstNumber, String secondNumber) {
-		double result = Double.parseDouble(firstNumber) + Double.parseDouble(secondNumber);
+		double result = Double.parseDouble(firstNumber) * Double.parseDouble(secondNumber);
 		return result;
 	}
 	public double divide(String firstNumber, String secondNumber) {
-		double result = Double.parseDouble(firstNumber) + Double.parseDouble(secondNumber);
+		double result = Double.parseDouble(firstNumber) / Double.parseDouble(secondNumber);
 		return result;
 	}
 	public double exponent(String firstNumber, String secondNumber) {
-		double result = Double.parseDouble(firstNumber) + Double.parseDouble(secondNumber);
+		double result = Math.pow(Double.parseDouble(firstNumber), Double.parseDouble(secondNumber));
 		return result;
 	}
 }

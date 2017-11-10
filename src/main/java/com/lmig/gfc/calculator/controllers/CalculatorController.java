@@ -37,10 +37,13 @@ public class CalculatorController {
 				result = calc.divide(firstNumber, secondNumber);
 			}
 			if (operator.equals("^")) {
-				result = calc.divide(firstNumber, secondNumber);
+				result = calc.exponent(firstNumber, secondNumber);
 			}
 		}
 		System.out.println(result);
+		mv.addObject("firstNum", firstNumber);
+		mv.addObject("secondNum", secondNumber);
+		mv.addObject("operator", operator);
 		mv.addObject("result", result);
 		return mv;
 
