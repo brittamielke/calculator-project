@@ -17,13 +17,12 @@ public class CalculatorController {
 	}
 
 	@RequestMapping("/")
-	public ModelAndView showApp(String firstNumber, String secondNumber, String operator) {
+	public ModelAndView showApp(Double firstNumber, Double secondNumber, String operator) {
 		
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("calculator");
-		if (firstNumber !=null && firstNumber.length() > 0) {
-//use this to check the console to see if it ever entered the if statement
-			System.out.println("Im in the if");
+		
+		if(operator != null) {
 			if (operator.equals("+")) {
 				result = calc.add(firstNumber, secondNumber);
 			}
@@ -40,7 +39,6 @@ public class CalculatorController {
 				result = calc.exponent(firstNumber, secondNumber);
 			}
 		}
-		System.out.println(result);
 		mv.addObject("firstNum", firstNumber);
 		mv.addObject("secondNum", secondNumber);
 		mv.addObject("operator", operator);
@@ -50,4 +48,3 @@ public class CalculatorController {
 
 	}
 }
-
